@@ -1,0 +1,163 @@
+.header {
+    min-height: 64px;
+    margin-bottom: 30px;
+}
+
+@media(max-width: 498px) {
+    .header {
+        margin-bottom: 10px;
+    }
+}
+
+
+.header__body {
+    display: flex;
+    padding-top: 18px;
+    align-items: center;
+}
+
+.logo {
+    flex: 1 1 auto;
+}
+
+@media(max-width: 992px) {
+    .logo {
+        flex: 0 1 220px;
+    }
+}
+@media (max-width: 867px) {
+    .logo {
+        flex: 0 1 240px;
+    }
+}
+@media(max-width: 798px) {
+    .logo {
+        flex: 1 1 auto;
+    }
+}
+
+.contacts {
+    text-align: right;
+    margin-right: 45px;
+}
+
+@media(max-width: 992px) {
+    .contacts {
+        margin-right: 25px;
+    }
+}
+@media(max-width: 498px) {
+    .contacts {
+        display: none;
+    }
+}
+
+.contacts__phone {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+@media(max-width: 992px) {
+    .contacts__phone {
+        font-size: 16px;
+    }
+}
+.contacts__time {
+    color: #959A9D;
+    line-height: 100%;
+    position: relative;
+    padding-left: 5px;
+}
+
+
+.contacts__time:before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #20FF87;
+}
+@media(max-width: 992px) {
+    .contacts__time:before {
+        left: -5px;
+        width: 6px;
+        height: 6px;
+    }
+}
+
+.messanger {
+    flex: 0 1 30%;
+    display: flex;
+    margin-right: 50px;
+}
+@media(max-width: 992px) {
+    .messanger {
+        margin-right: 25px;
+    }
+}
+@media (max-width: 867px) {
+    .messanger {
+        flex: 0 1 auto;
+    }
+}
+@media(max-width: 798px) {
+    .messanger {
+        display: none;
+    }
+}
+
+.messanger__text {
+    max-width: 190px;
+    font-size: 12px;
+    line-height: 140%;
+    text-align: right;
+    color: var(--text-color);
+}
+@media(max-width: 992px) {
+    .messanger__text {
+        max-width: 160px;
+    }
+}
+@media (max-width: 867px) {
+    .messanger__text {
+        display: none;
+    }
+}
+
+.icons-messanger {
+    margin-left: 15px;
+    
+}
+
+.icons-messanger__tg {
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.header__button {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 12px;
+    padding: 21px 25px 22px 26px;
+    text-decoration: none;
+    border: 1px solid #43AAFF;
+    border-radius: 100px;
+    max-width: 200px;
+    transition: 0.3s ease-in;
+}
+
+.header__button:hover {
+    background-color: var(--blue-color);
+    color: #fff;
+}
+@media (max-width: 867px) {
+    .header__button {
+        margin-left: auto;
+    }
+}

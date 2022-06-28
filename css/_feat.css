@@ -1,0 +1,137 @@
+.feat__cards {
+    margin-bottom: 22px;
+}
+
+.cards-feat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media(max-width: 798px) {
+    .cards-feat {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+.item-feat {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    max-width: 248px;
+    margin-right: 10px;
+    min-height: 150px;
+    border-radius: 30px;
+}
+@media(max-width: 798px) {
+    .item-feat {
+        flex: 1 1 auto;
+        max-width: 100%;
+        justify-content: space-between;
+        margin: 0;
+    }
+}
+
+.item-feat__blue {
+    background-color: var(--blue-color);
+}
+.item-feat__yellow {
+    background-color: var(--yellow-color);
+}
+
+.item-feat__subtitle {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 140%;
+    color: #fff;
+    padding-left: 25px;
+}
+@media(max-width: 798px) {
+    .item-feat__subtitle {
+        font-size: 22px;
+    }
+}
+@media(max-width: 498px) {
+    .item-feat__subtitle {
+        font-size: 18px;
+    }
+}
+
+.item-feat__img {
+    object-position: 5px 0;
+}
+
+.item-feat__img--check {
+    margin-top: 20px;
+}
+/* навигация */
+
+.nav-feat {
+    background-color: #fff;
+    border-radius: 100px;
+    box-shadow: 0px 0px 20px rgba(29, 31, 33, 0.12);
+    min-height: 70px;
+ 
+}
+@media(max-width: 798px) {
+    .nav-feat {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-radius: unset;
+        z-index: 99999;
+    }
+}
+
+.nav-feat__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70px;
+}
+.nav-feat__items {
+    list-style: none;
+    position: relative;
+}
+
+.nav-feat__link {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 100%;
+    color: var(--text-color);
+    padding: 28px 37px;
+    transition: 0.3s ease;
+}
+@media (max-width: 992px) {
+    .nav-feat__link {
+        padding: 20px 25px;
+    }
+}
+@media (max-width: 867px) {
+    .nav-feat__link {
+        padding: 15px
+    }
+}
+@media (max-width: 798px) {
+    .nav-feat {
+        display: none;
+    }
+    .nav-feat__link {
+        font-size: 13px;
+    }
+}
+
+.nav-feat__link:hover {
+    background-color: var(--blue-color);
+    border-radius: 100px;
+    color: #fff;
+}
+
+.nav-feat__link-active {
+    background-color: var(--blue-color);
+    border-radius: 100px;
+    color: #fff;
+}
+
+/* навигация end */
