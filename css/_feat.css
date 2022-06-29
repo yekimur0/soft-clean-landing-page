@@ -115,7 +115,7 @@
 }
 @media (max-width: 798px) {
     .nav-feat {
-        display: none;
+        
     }
     .nav-feat__link {
         font-size: 13px;
