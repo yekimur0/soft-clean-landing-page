@@ -14,16 +14,20 @@ document.addEventListener('DOMContentLoaded', () => {
     let scroll = new SmoothScroll('a[href*="#"]');
 
     let number = document.querySelector('.questions-answer__number');
+    let progressRect = document.querySelector('.progress__rect');
+    let progressMask = document.querySelector('.progress__mask');
+     
     const answerContainer = document.querySelector('.questions-answer__content');
     const inputArea = document.querySelector('[data-area]')
     const footageCalculate = document.querySelector('.footage-calculate');
     const footageBtn = document.querySelector('.footage-calculate__btn');
     const accordionItem = document.querySelectorAll('.item-accordion')
-    let progressRect = document.querySelector('.progress__rect');
-    let progressMask = document.querySelector('.progress__mask');
     const modal = document.querySelector('.modal');
     const btnConsalting = document.querySelectorAll('[data-name="btn-consulting"]');
     const btnModalClose = document.querySelector('.modal__close');
+    const burgerMenu = document.querySelector('#burger');
+    const footer = document.querySelector('.footer')
+
     
     let arrAnswer = [];
 
@@ -169,7 +173,50 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   
+window.addEventListener( 'resize', resizeElements )
 
+function resizeElements ()  {
+    if(window.screen.width <= 615) {
+        const featLink = document.querySelectorAll('.nav-feat__link'); 
+              featLink.forEach(item => {
+                    item.style.fontSize = '10px'
+                    
+              })
+    } 
+    if (window.screen.width >= 615) {
+        const featLink = document.querySelectorAll('.nav-feat__link'); 
+              featLink.forEach(item => {
+                    item.style.fontSize = '14px'
+              })
+    }
+    if(window.screen.width <= 798) {
+        observer.observe(footer)
+    }
+}
+
+
+burgerMenu.addEventListener( 'click', openBurgerMenu );
+
+function openBurgerMenu  () {
+    const menuList = document.querySelector('.nav-feat__list');
+          menuList.classList.toggle('nav-feat__list--active')
+}
+
+
+let observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+
+        if(entry.target) {
+            const bottomMenu = document.querySelector('.nav-feat');
+                  bottomMenu.style.display = 'block'
+        } 
+        if(entry.isIntersecting) {
+            const bottomMenu = document.querySelector('.nav-feat');
+            bottomMenu.style.display = 'none'
+        }
+
+    })
+})
 
 
 });
